@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_marginTop="16dp"
+        android:id="@+id/ivGambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_tittle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/first_player"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivGambar"
+        app:layout_constraintBottom_toTopOf="@id/ivRestart">
+
+        <TextView
+            android:id="@+id/tvPemain1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pemain_1"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <ImageView
+            android:id="@+id/ivRockPemain1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/batu"
+            android:padding="8dp"
+            android:src="@drawable/batu" />
+
+        <ImageView
+            android:id="@+id/ivPaperPemain1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/kertas"
+            android:padding="8dp"
+            android:src="@drawable/kertas" />
+
+        <ImageView
+            android:id="@+id/ivScissorPemain1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/gunting"
+            android:padding="8dp"
+            android:src="@drawable/gunting" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/vs"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:rotation="330"
+        android:textAlignment="center"
+        android:textColor="@color/merah"
+        app:layout_constraintTop_toBottomOf="@id/ivGambar"
+        app:layout_constraintLeft_toRightOf="@id/first_player"
+        app:layout_constraintRight_toLeftOf="@id/com_player"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/com_player"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivGambar"
+        app:layout_constraintBottom_toTopOf="@id/ivRestart">
+
+        <TextView
+            android:id="@+id/tvCom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/com"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <ImageView
+            android:id="@+id/ivRockCom"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/batu"
+            android:padding="8dp"
+            android:src="@drawable/batu" />
+
+        <ImageView
+            android:id="@+id/ivPaperCom"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/kertas"
+            android:padding="8dp"
+            android:src="@drawable/kertas" />
+
+        <ImageView
+            android:id="@+id/ivScissorCom"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/gunting"
+            android:padding="8dp"
+            android:src="@drawable/gunting" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/refresh"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

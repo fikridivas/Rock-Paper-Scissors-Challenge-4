@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RPS Game Chapter 4</string>
+    <string name="pemain_1">Pemain 1</string>
+    <string name="batu">batu</string>
+    <string name="kertas">kertas</string>
+    <string name="gunting">gunting</string>
+    <string name="vs">VS</string>
+    <string name="com">COM</string>
+    <string name="draw">DRAW</string>
+    <string name="pemain1menang">Pemain 1 MENANG!</string>
+    <string name="pemain2menang">Pemain 2 MENANG!</string>
+</resources>
